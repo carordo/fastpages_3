@@ -10,11 +10,12 @@ title: Carlos Ordonez- Analytics
 description: Combining business and data analytics.
 github_username: carordo
 # you can comment the below line out if your repo name is not different than your baseurl
-github_repo: "fastpages_3"
+#github_repo: "fastpages_3"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
-url: "https://carordo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "https://carordo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.carlosaordonez.com"
 
 ###########################################################
 #########  Special Instructions for baseurl ###############
