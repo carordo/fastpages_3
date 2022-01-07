@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Calculating The Cost Of Overbooking Airline Tickets Using Analytics | Carlos Ordonez- Analytics</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Calculating The Cost Of Overbooking Airline Tickets Using Analytics" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using Python to calculate max number of overbooking and max profit in selling airline tickets." />
+<meta property="og:description" content="Using Python to calculate max number of overbooking and max profit in selling airline tickets." />
+<link rel="canonical" href="https://www.carlosaordonez.com/fastpages_3/2020/08/15/calculating-the-cost-of-overbooking-airline/" />
+<meta property="og:url" content="https://www.carlosaordonez.com/fastpages_3/2020/08/15/calculating-the-cost-of-overbooking-airline/" />
+<meta property="og:site_name" content="Carlos Ordonez- Analytics" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-08-15T11:13:59-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Calculating The Cost Of Overbooking Airline Tickets Using Analytics" />
+<script type="application/ld+json">
+{"headline":"Calculating The Cost Of Overbooking Airline Tickets Using Analytics","url":"https://www.carlosaordonez.com/fastpages_3/2020/08/15/calculating-the-cost-of-overbooking-airline/","dateModified":"2020-08-15T11:13:59-05:00","datePublished":"2020-08-15T11:13:59-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.carlosaordonez.com/fastpages_3/2020/08/15/calculating-the-cost-of-overbooking-airline/"},"description":"Using Python to calculate max number of overbooking and max profit in selling airline tickets.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages_3/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://www.carlosaordonez.com/fastpages_3/feed.xml" title="Carlos Ordonez- Analytics" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages_3/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages_3/">Carlos Ordonez- Analytics</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages_3/about/">About Me</a><a class="page-link" href="/fastpages_3/search/">Search</a><a class="page-link" href="/fastpages_3/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Calculating The Cost Of Overbooking Airline Tickets Using Analytics</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-08-15T11:13:59-05:00" itemprop="datePublished">
+        Aug 15, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">logincarordo</span></span>, 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">email</span></span>, 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">display_name</span></span>, 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">first_nameCarlos</span></span>, 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">last_nameOrdonez</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastpages_3/categories/#Aviation Analytics">Aviation Analytics</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <blockquote>
+  <p>This article was originally posted on <a href="https://www.linkedin.com/pulse/calculating-cost-overbooking-airline-tickets-using-carlos/">Linkedin here</a> prior to the pandemic Using Python to calculate the cost of overbooking an airline ticket.</p>
+
+  <p>The code can be found in <a href="https://github.com/carordo/Overbooking">GitHub here</a>.</p>
+</blockquote>
+
+<p>I have been curious to use data analytics in aviation operations. I found that one of the models that airlines use is the binomial function to determine what is the optimum revenue the airline, after calculating the probability of the number of passengers that will show up when overbooking a specific route. The probability is modeled with binomial function assuming that each show or no show sample is independent of each other. This probability is affected by many possible factors like delayed flights, traffic jams, canceling a flight due to personal reasons, etc.</p>
+
+<!-- wp:image {"align":"center","id":116,"sizeSlug":"large"} -->
+
+<figure class="aligncenter size-large"><img src="/assets/images/2020/08/Binomial-function.png" alt="Binomial function" class="wp-image-116" /><br />
+<figcaption>Binomial function</figcaption>
+</figure>
+
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"align":"justify"} -->
+
+<p>This article was inspired by <a href="https://github.com/CorySimon">Cory Simon</a> ’s article on “<a href="http://by%20how%20many%20flights%20should%20an%20airline%20overbook/?"> </a><a href="http://corysimon.github.io/articles/by-how-many-flights-should-an-airline-overbook/">By How Many Flights an Airline Should Overbook</a>”. In his analysis, he uses a normal approximation of a binomial distribution. He allocates fixed parameters such as a number of seats per aircraft, the probability of a passenger and expands to a range of additional tickets beyond capacity sold the price per ticket and the price of the voucher. The voucher in his example is defined as the cost the airline incurs to pay passengers for an overbooked ticket.</p>
+
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"justify"} -->
+
+<p>I decided to expand a little more and create a function that could allow passing the value of the ticket, the voucher cost, the number of seats, the probability rate of a passenger showing up and the number of additional seats. I used Python’s <a href="https://docs.scipy.org/doc/scipy-0.16.0/reference/generated/scipy.stats.binom.html">numpy cumulative distributive function</a> to calculate the probability of passengers to show to a flight beyond capacity <strong>(Total Seats Available in the aircraft + total additional overbooking tickets)</strong>. The function also calculates the max number of possible seats available that could be overbooked. This is defined by <em>p * x=Total Seats Available</em>. If the probability is equal to 1 then all seats will be taken. By solving <em>x</em>, then <em>x=Total Seats Available/p _will give the maximum seats available for that probability _p</em>. A good explanation of the calculation of the probability of overbooking can also be found <a href="https://math.stackexchange.com/questions/2426604/binomial-probability-of-airline-overbooking">here</a>.</p>
+
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+
+<p>Let’s assume the case of  <strong>Embraer 175</strong>  flying  <strong>Miami to Cleveland with 128 seats</strong>  in the main cabin.</p>
+
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","id":118,"sizeSlug":"large"} -->
+
+<figure class="aligncenter size-large"><img src="/assets/images/2020/08/Embraer_175.png" alt="Embraer-175-cabin-Layout" class="wp-image-118" /><br />
+<figcaption>Embraer-175-cabin-Layout</figcaption>
+</figure>
+
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"align":"justify"} -->
+
+<p>For this calculation, I am focused on the number of additional tickets beyond capacity. The following example tests a ticket with a value of $512.00 from Miami to Cleveland in American Airlines, assuming a probability rate of passengers to show at this time on this date at 90%. The maximum number of additional seats the airline could sell is equal to_ Max_Seats = 128 /.9 = 142.22 - 128 = 14.22 _rounded down will give  <strong>14</strong>  additional seats on  <strong>128 </strong> seat aircraft, with a probability of  <strong>90</strong> % of the passengers showing up and a voucher cost for overbooking of  <strong>$200.00</strong>.</p>
+
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","id":123,"sizeSlug":"large"} -->
+
+<figure class="aligncenter size-large"><img src="/assets/images/2020/08/Air-Fare-example-for-Binomial-Function-750x191.png" alt="Air Fare example for Binomial Function" class="wp-image-123" /><br />
+<figcaption>Air Fare example for Binomial Function</figcaption>
+</figure>
+
+<!-- /wp:image -->
+
+<p>The airline by selling additional tickets increases its revenue, but the net profit decreases if they end up paying for too many vouchers. The voucher cost could include the cost of re-scheduling passengers. In this example, it is omitted. I am trying to find the optimum amount of additional tickets the airline could sell.</p>
+
+<!-- wp:image {"align":"center","id":120,"sizeSlug":"large"} -->
+
+<figure class="aligncenter size-large"><img src="/assets/images/2020/08/overbooking_calculation.jpg" alt="Overbooking Calculation image" class="wp-image-120" /><br />
+<figcaption>Overbooking Calculation image</figcaption>
+</figure>
+
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+
+<p>The result of this graph shows the maximum profit per additional ticket at a fixed voucher cost, with the maximum amount of overbooking tickets (14). The maximum total profit can be reached at $66,995.94 overbooking 6 tickets of the 14.</p>
+
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","id":124,"sizeSlug":"large"} -->
+
+<figure class="aligncenter size-large"><img src="/assets/images/2020/08/Expected-Reveneu-vs-tickets-beyond-capacity-graph.jpg" alt="Expected Reveneu vs tickets beyond capacity graph" class="wp-image-124" /><br />
+<figcaption>Expected Reveneu vs tickets beyond capacity graph</figcaption>
+</figure>
+
+<!-- /wp:image -->
+
+<!-- wp:image {"align":"center","id":121,"sizeSlug":"large"} -->
+
+<figure class="aligncenter size-large"><img src="/assets/images/2020/08/table_with_overbooking_tickets_sold.jpg" alt="Table with Expected profit by exceeding overbooking" class="wp-image-121" /><br />
+<figcaption>Table with Expected profit by exceeding overbooking</figcaption>
+</figure>
+
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+
+<p>The following table test different vouchers values based on the suggested overbooking tickets found on the previous table.</p>
+
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","id":122,"sizeSlug":"large"} -->
+
+<figure class="aligncenter size-large"><img src="/assets/images/2020/08/table_with_overbooking_tickets_max_profit.jpg" alt="Table with Overbooking tickets sold and max profit" class="wp-image-122" /><br />
+<figcaption>Table with Overbooking tickets sold and max profit</figcaption>
+</figure>
+
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+
+<p>The table shows that the ideal  <strong>Voucher_Cost</strong>  should be less than $200.00, overbooking 6 seats. If the voucher cost offered is higher than $600.00 the airline should not overbook any additional tickets.</p>
+
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+
+<p>This analysis is just the first to understand a model, in this case, the binomial function, when applying analytics in aviation operations. It is important to highlight that there are 4 moving variables: Ticket sale price, the voucher cost, probability of passengers to show at a specific time and date, and the number of seats per aircraft.</p>
+
+<!-- /wp:paragraph -->
+
+  </div><a class="u-url" href="/fastpages_3/2020/08/15/calculating-the-cost-of-overbooking-airline/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages_3/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/fastpages_3/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages_3/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Combining business and data analytics.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/carordo" target="_blank" title="carordo"><svg class="svg-icon grey"><use xlink:href="/fastpages_3/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/carlosaordonez" target="_blank" title="carlosaordonez"><svg class="svg-icon grey"><use xlink:href="/fastpages_3/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
