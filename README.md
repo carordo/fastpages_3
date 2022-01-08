@@ -6,10 +6,15 @@
 
 https://carordo.github.io/fastpages_3/
 
-# My Blog
+# Carlos Ordonez
 
+## Analytics with a Business View
+Welcome to my data science projects site. My goal is to compile different projects, and make highlight the simple ones forn non-Analytics people intersted in data.
 
-_powered by [fastpages](https://github.com/fastai/fastpages)_
+[Enter here](https://carordo.github.io/fastpages_3).
+
+## Fastpages Reference
+### This area provide some links realated to Fastpages for reference.
 
 
 ## What To Do Next?
@@ -27,3 +32,5 @@ Great!  You have setup your repo.  Now its time to start writing content.  Some 
 Note: you may want to remove example blog posts from the `_posts`,  `_notebooks` or `_word` folders (but leave them empty, don't delete these folders) if you don't want these blog posts to appear on your site.
 
 Please use the [nbdev & blogging channel](https://forums.fast.ai/c/fastai-users/nbdev/48) in the fastai forums for any questions or feature requests.
+
+_powered by [fastpages](https://github.com/fastai/fastpages)_
