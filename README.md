@@ -6,8 +6,14 @@
 
 https://carordo.github.io/fastpages_3/
 
-# My Blog
+# Carlos Ordonez
 
+## Analytics with a Business View
+Welcome to my data science projects site. My goal is to compile different projects, and make highlight the simple ones forn non-Analytics people intersted in data.
+
+[Enter here](https://carordo.github.io/fastpages_3).
+
+## This area provide some links realated to Fastpages for reference.
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_
 
