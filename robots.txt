@@ -1,1 +1,1 @@
-Sitemap: https://www.carlosaordonez.com/fastpages_3/sitemap.xml
+Sitemap: https://carordo.github.io/fastpages_3/sitemap.xml
