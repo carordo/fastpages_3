@@ -1,4 +1,4 @@
-To create a md file use this code for GitHub:
+### To create a md file use this code for GitHub:
 
 pandoc --extract-media=. -s 2022-01-16-Financial_Analysis-Excel_Basics.docx -t gfm -o mddoc.md
 
