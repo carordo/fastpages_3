@@ -21,7 +21,7 @@ author:
   first_name: Carlos
   last_name: Ordonez
 permalink:
-excerpt: Basics of using excel for financial analysis.
+excerpt: Basics of using excel for financial analysis .
 ---
 
 
