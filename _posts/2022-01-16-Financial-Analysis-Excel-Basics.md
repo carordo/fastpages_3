@@ -14,13 +14,8 @@ tags:
 - Financial Analysis
 - Business
 meta:
-author:
-  login: carordo
-  email:
-  display_name:
-  first_name: Carlos
-  last_name: Ordonez
-permalink:
+author: Carlos Ordonez
+permalink: /fastpages_3/financial%20analysis/2022/01/16/Financial-Analysis-Excel-Basics.html
 excerpt: Basics of using excel for financial analysis .
 ---
 
