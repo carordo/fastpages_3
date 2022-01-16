@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Financial Analysis – Excel Basics
-date:
+date: 2022-01-16 12:13:59.000000000 -04:00
 type: post
 parent_id: '0'
 published: true
