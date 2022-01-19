@@ -329,7 +329,7 @@ Finally, this simulation shows a simplified way to get acquainted with
 using PRNs to estimate the rate of infections. Further work could
 include factoring the use of social distance or other means that could
 help mitigate the infection rate. Portions of the code can be found
-[here](https://www.carlosaordonez.com/fastpages_3/2022/01/04/Pandemic-simulation-covid.html).
+[here](https://www.carlosaordonez.com/fastpages_3/2022/01/04/Pandemic-simulation-Covid-First-Version.html).
 
 # **References**
 
