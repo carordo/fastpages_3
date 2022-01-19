@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Pandemic Flu Spread Using “Green” Simulation Method for Small Sample
@@ -17,12 +16,11 @@ tags:
 - Business
 meta:
 author: Carlos Ordonez
-permalink: 
+permalink:
 excerpt: Utilizing "Green" simulation to calculate the rate of infections .
 ---
 
-**Pandemic Flu Spread Using “Green” Simulation Method for Small Sample
-of Elementary Students**
+#Pandemic Flu Spread Using “Green” Simulation Method for Small Sample of Elementary Students**
 
 Carlos Ordonez and Juan Carlos Pineda
 
