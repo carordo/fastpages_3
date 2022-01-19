@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Pandemic Flu Spread Using “Green” Simulation Method for Small Sample
-of Elementary Students
+title: Pandemic Flu Spread Using “Green” Simulation Method for Small Sample of Elementary Students
 date: 2021-05-16 12:13:59.000000000 -04:00
 type: post
 parent_id: '0'
