@@ -18,10 +18,7 @@ author: Carlos Ordonez
 permalink:
 excerpt: Utilizing "Green" simulation to calculate the rate of infections .
 ---
-
-#Pandemic Flu Spread Using “Green” Simulation Method for Small Sample of Elementary Students**
-
-Carlos Ordonez and Juan Carlos Pineda
+Authors: Carlos Ordonez and Juan Carlos Pineda
 
 **Abstract:** This paper studies a pandemic flu spread case applying a
 “green” simulation method, using pseudo-random numbers as presented in
