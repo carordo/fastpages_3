@@ -24,7 +24,7 @@ Authors: Carlos Ordonez and Juan Carlos Pineda
 “green” simulation method, using pseudo-random numbers as presented in
 the paper by Wilson S., Alabdulkarim A. and Goldsman D. W, “Green
 Simulation of Pandemic Disease Propagation” (Wilson S., 2019) in a
-simulation environment build in Python. The scenario is an elementary
+simulation environment built in Python. The scenario is an elementary
 school with twenty-one kids and the impact of infection when one
 infected kid enters the system. The findings and answers to the
 questions are presented in this paper.
@@ -46,9 +46,9 @@ This paper analyzes the case of an elementary school with twenty-one
 students having one infected child on the first day. The infection rate
 *β* = 3 as the infected kid can infect on three consecutive days. The
 probability of infecting any other kid is *p*=0.02 and it is modeled
-using Bernoulli independent, identical distributed *p* trials. As a new
+using Bernoulli independent, identically distributed *p* trials. As a new
 kid becomes infected, he or she will have the same 3-day infection rate
-and the same *p* probability changes to infect other children.
+and the same *p* probability to infect other children.
 
 For this simulation we will be using a simplified approached not
 considering any mitigation effect through social distance, or more
