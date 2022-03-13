@@ -42,6 +42,9 @@ end, we used our knowledge to build classification models to be able to
 tell if a water point is functional or not. Finally, we used ESRI’s
 story map to create a presentation of our findings.*
 
+The interactive map can be found here:  [Uganda Water Point Analysis - Storymaps](https://storymaps.arcgis.com/stories/0f4429f633f4480a9ef0ad80fd3b2f43)
+
+
 # Introduction
 
 Having clean and safe water, is a basic necessity that we take for
