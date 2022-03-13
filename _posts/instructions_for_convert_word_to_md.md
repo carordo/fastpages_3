@@ -1,9 +1,14 @@
 ### To create a md file use this code for GitHub:
 
 * pandoc --extract-media=. -s 2022-01-16-Financial_Analysis-Excel_Basics.docx -t gfm -o mddoc.md
-* Create a folder inside assets/images/ with the name of the article and Copy the media folder
-* Change the name of the file with the location of the media file including
+* Create a folder inside assets/images/ with the name of the article and Copy the media folder created in the previus step.
+* Change the name of the file mddoc.md with the name of new filter
+* Change the name of image location by replacing **./media** with the location of the media file including
+
 **/fastpages_3/assets/images/name-of-the-file/media**
+
+
+
 * Copy this meta tag info and make changes
 
 ---
