@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="How To Build A Crypto Dashboard In Google Sheets" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="How to build a dashboard for crypto currencies in Google sheets" />
-<meta property="og:description" content="How to build a dashboard for crypto currencies in Google sheets" />
+<meta name="description" content="How To Build A Dashboard For Crypto Currencies In Google Sheets" />
+<meta property="og:description" content="How To Build A Dashboard For Crypto Currencies In Google Sheets" />
 <link rel="canonical" href="https://www.carlosaordonez.com/fastpages_3/2022/03/12/How-to-build-a-crypto-dashboard-in-Google-Sheets.html" />
 <meta property="og:url" content="https://www.carlosaordonez.com/fastpages_3/2022/03/12/How-to-build-a-crypto-dashboard-in-Google-Sheets.html" />
 <meta property="og:site_name" content="Carlos Ordonez- Analytics" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How To Build A Crypto Dashboard In Google Sheets" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-12T00:00:00-06:00","datePublished":"2022-03-12T00:00:00-06:00","description":"How to build a dashboard for crypto currencies in Google sheets","headline":"How To Build A Crypto Dashboard In Google Sheets","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.carlosaordonez.com/fastpages_3/2022/03/12/How-to-build-a-crypto-dashboard-in-Google-Sheets.html"},"url":"https://www.carlosaordonez.com/fastpages_3/2022/03/12/How-to-build-a-crypto-dashboard-in-Google-Sheets.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-12T00:00:00-06:00","datePublished":"2022-03-12T00:00:00-06:00","description":"How To Build A Dashboard For Crypto Currencies In Google Sheets","headline":"How To Build A Crypto Dashboard In Google Sheets","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.carlosaordonez.com/fastpages_3/2022/03/12/How-to-build-a-crypto-dashboard-in-Google-Sheets.html"},"url":"https://www.carlosaordonez.com/fastpages_3/2022/03/12/How-to-build-a-crypto-dashboard-in-Google-Sheets.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastpages_3/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://www.carlosaordonez.com/fastpages_3/feed.xml" title="Carlos Ordonez- Analytics" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages_3/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -88,7 +88,7 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="how-to-build-a-dashboard-for-crypto-currencies-in-google-sheets">How to build a dashboard for crypto currencies in Google sheets</h1>
+    <h1 id="how-to-build-a-dashboard-for-crypto-currencies-in-google-sheets">How To Build A Dashboard For Crypto Currencies In Google Sheets</h1>
 
 <p>If you have entered into crypto world, you may have noticed that it is difficult to know what is your exact crypto balance, particularly if you move your crypto out of the exchanges.</p>
 
@@ -104,15 +104,15 @@ window.onload = wrap_img;
 
 <p>The API allows to obtain current crypto price by parsing the symbol of the crypto currency.</p>
 
-<p>IMPORTDATA(“https://cryptoprices.cc/BTC/”)</p>
+<p><strong>IMPORTDATA(“https://cryptoprices.cc/BTC/”)</strong></p>
 
 <p>Other data can be called is market capitalization</p>
 
-<p>IMPORTDATA(“https://cryptoprices.cc/BTC/MCAP”)</p>
+<p><strong>IMPORTDATA(“https://cryptoprices.cc/BTC/MCAP”)</strong></p>
 
 <p>Also, all time high.</p>
 
-<p>IMPORTDATA(“https://cryptoprices.cc/BTC/ATH”)</p>
+<p><strong>IMPORTDATA(“https://cryptoprices.cc/BTC/ATH”)</strong></p>
 
 <h2 id="market-capitalization-and-circulating-supply">Market Capitalization and Circulating Supply</h2>
 
@@ -132,25 +132,19 @@ window.onload = wrap_img;
 
 <p><strong>Percentage of Circulating Supply from Total Coins:</strong> This column calculated the percentage of the circulating supply based on the selected columns.</p>
 
-<p>The Refresh button to the right is macro that executes the update for the Price, Marketcap and AllTimeHigh columns. This <a href="https://spreadsheet.dev/buttons-in-google-sheets#:~:text=To%20assign%20a%20macro%20to,by%20clicking%20on%20the%20button.">link</a> has instructions to help set it up.</p>
+<p>The Refresh button to the right is macro that executes the update for the <strong>Price</strong>, <strong>Marketcap</strong> and <strong>AllTimeHigh</strong> columns. This <a href="https://spreadsheet.dev/buttons-in-google-sheets#:~:text=To%20assign%20a%20macro%20to,by%20clicking%20on%20the%20button.">link</a> has instructions to help set it up.</p>
 
 <p>The bar plots to the right provides info on the circulating supply vs the market cap, and the percentage of the circulating supply from the selected currencies.</p>
 
 <p>It is important to note that, SHIB and DOGE – particularly SHIB- circulating supply is so large, that it shadows all the other symbols when looking at the percentage of the circulating supply from the total selected coins.</p>
 
-<p>You have the exchanges such as Coinbase and FTX, the wallets.</p>
+<h3 id="supporting-links">Supporting Links:</h3>
 
-<p>Gets info on Crypto market</p>
+<p>Gets info on Crypto market: https://coinmarketcap.com/</p>
 
-<p>https://coinmarketcap.com/</p>
+<p><strong>Getting started with the macro:</strong> <a href="https://medium.com/coinmonks/real-time-crypto-prices-on-google-sheets-3-simple-steps-b73d9ba3e81c">https://medium.com/coinmonks/real-time-crypto-prices-on-google-sheets-3-simple-steps-b73d9ba3e81c</a></p>
 
-<p>Getting started with the macro</p>
-
-<p><a href="https://medium.com/coinmonks/real-time-crypto-prices-on-google-sheets-3-simple-steps-b73d9ba3e81c">https://medium.com/coinmonks/real-time-crypto-prices-on-google-sheets-3-simple-steps-b73d9ba3e81c</a></p>
-
-<p>Creating the Macro Button</p>
-
-<p>https://spreadsheet.dev/buttons-in-google-sheets#:~:text=To%20assign%20a%20macro%20to,by%20clicking%20on%20the%20button.</p>
+<p><strong>Creating the Macro Button:</strong> https://spreadsheet.dev/buttons-in-google-sheets#:~:text=To%20assign%20a%20macro%20to,by%20clicking%20on%20the%20button.</p>
 
   </div><a class="u-url" href="/fastpages_3/2022/03/12/How-to-build-a-crypto-dashboard-in-Google-Sheets.html" hidden></a>
 </article>
