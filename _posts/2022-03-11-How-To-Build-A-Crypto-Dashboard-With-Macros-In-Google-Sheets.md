@@ -8,7 +8,7 @@ published: true
 password: ''
 status: publish
 categories:
-- crypto
+- Crypto
 tags:
 - Crypto
 - Analytics
@@ -19,7 +19,7 @@ permalink: /fastpages_3/crypto/2022/03/11/How-To-Build-A-Crypto-Dashboard-With-M
 excerpt: Crypto dashboard in Google Sheets for managing a portfolio of crypto currencies.
 ---
 
-# How To Build A Dashboard For Crypto Currencies With Macros In Google Sheets
+**How To Build A Dashboard For Crypto Currencies With Macros In Google Sheets**
 
 If you have entered into crypto world, you may have noticed that it is
 difficult to know what is your exact crypto balance, particularly if you
