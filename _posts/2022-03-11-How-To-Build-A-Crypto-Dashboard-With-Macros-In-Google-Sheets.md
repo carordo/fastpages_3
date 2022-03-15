@@ -78,7 +78,7 @@ net gain or loss is reflected on the most right.
 <img src="/fastpages_3/assets/images/2022-03-11-How-To-Build-A-Crypto-Dashboard-With-Macros-In-Google-Sheets/media/image2.png" style="width:6.5in;height:0.65833in" />
 
 ## Market Capitalization and Circulating Supply
-<iframe width="1200" height="800"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQUoncuk2bdVOP7fzQCr-Siz-5hMomoteTBoCa6bVnbAbYB35i-C4AvLw-GgfKr68Edna44JPA8j7VQ/pubhtml?widget=true&amp;headers=false"></iframe>
+<iframe width="1200" height="400"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQUoncuk2bdVOP7fzQCr-Siz-5hMomoteTBoCa6bVnbAbYB35i-C4AvLw-GgfKr68Edna44JPA8j7VQ/pubhtml?widget=true&amp;headers=false"></iframe>
 
 The tab Market_info, contains information to give an insight of the
 market from a selected number of coins.
