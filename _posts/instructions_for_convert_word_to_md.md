@@ -9,6 +9,11 @@
 
 
 
+pandoc --extract-media=. -s 2022-13-03-Data-Analysis-and-Prediction-of-Waterpoint-Functionality-Using-Spatial-and-Non-spatial-Machine-Learning-Models.docx -t gfm -o mddoc.md
+pandoc --extract-media=. -s 2022-03-11-How-To-Build-A-Crypto-Dashboard-With-Macros-In-Google-Sheets.docx -t gfm -o 2022-03-11-How-To-Build-A-Crypto-Dashboard-With-Macros-In-Google-Sheets.md
+
+
+
 * Copy this meta tag info and make changes
 
 ---

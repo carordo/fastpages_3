@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Calculating The Cost Of Overbooking Airline Tickets Using Analytics
-date: 2020-08-15 12:13:59.000000000 -04:00
+date: 2022-01-17 12:13:59.000000000 -04:00
 type: post
 parent_id: '0'
 published: true
