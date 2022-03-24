@@ -73,7 +73,7 @@ the prices of crypto currency.
 
 In the **Portfolio** tab with blue letters enter the information of the
 symbol, date, value, cost and fees of each crypto transaction. A total
-net gain or loss is reflected on the most right.
+net gain or loss is reflected on the most right. The values here are used as an example.
 
 <img src="/fastpages_3/assets/images/2022-03-11-How-To-Build-A-Crypto-Dashboard-With-Macros-In-Google-Sheets/media/image2.png" style="width:6.5in;height:0.65833in" />
 
