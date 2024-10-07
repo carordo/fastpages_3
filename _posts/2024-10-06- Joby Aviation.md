@@ -12,7 +12,7 @@ categories:
 tags:
 - Analytics
 - Spatial Analysis
--ChatGPT
+- ChatGPT
 meta:
 author: Carlos Ordonez
 permalink: /2024/08/07/Summary-Joby-Aviation.md
